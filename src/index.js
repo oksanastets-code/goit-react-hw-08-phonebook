@@ -1,12 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { App } from 'components/App';
+import { BrowserRouter } from 'react-router-dom';
+import { App } from './App';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
+import 'modern-normalize/modern-normalize.css';
 
 ReactDOM.render(
   <React.StrictMode>
+    <BrowserRouter basename="/goit-react-hw-08-phonebook/">
     <App />
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
