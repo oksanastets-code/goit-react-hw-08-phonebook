@@ -1,16 +1,27 @@
 import React from 'react';
 
+const styles = {
+  form: {
+    width: 320,
+  },
+  label: {
+    display: 'flex',
+    flexDirection: 'column',
+    marginBottom: 15,
+  },
+};
+
 const SignUpView = () => {
   return (
     <>
       <h1>Зареєструватися</h1>
       <form
         // onSubmit={handleSubmit}
-        // style={styles.form}
+        style={styles.form}
         autoComplete="off"
       >
         <label
-        // style={styles.label}
+        style={styles.label}
         >
           Name
           <input
@@ -21,7 +32,7 @@ const SignUpView = () => {
         </label>
 
         <label
-        // style={styles.label}
+        style={styles.label}
         >
           Email
           <input
@@ -33,7 +44,7 @@ const SignUpView = () => {
         </label>
 
         <label
-        // style={styles.label}
+        style={styles.label}
         >
           Password
           <input
