@@ -12,7 +12,8 @@ export const App = () => {
             <NavBar />
             
                 <Routes>
-                    <Route path="/" element={<HomeView />}></Route>
+                <Route path="/" element={<HomeView />}></Route>
+                 <Route path="/user" element={<HomeView />}></Route>
                     <Route path="/signup" element={<SignUpView />}></Route>
                     <Route path="/login" element={<LogInView />}></Route>
                     {/* <Route path="*" element={<NotFoundView />}></Route> */}
