@@ -1,4 +1,4 @@
-import { NavLink, Outlet } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { Nav, NavList, NavListItem } from './Navigation.styled';
 export default function Navigation() {
   return (
