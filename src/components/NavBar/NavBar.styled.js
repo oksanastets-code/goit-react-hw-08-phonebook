@@ -4,5 +4,4 @@ export const Header = styled.header`
   padding: 20px;
   background-color: yellow;
   border-radius: 8px;
-  
 `;

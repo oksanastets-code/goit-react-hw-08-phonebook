@@ -15,7 +15,7 @@ import {
   REGISTER,
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
-// import { todosReducer } from './todos';
+import { default as phonebookReducer } from './PhoneBook/phone-book-reducer';
 import { authReducer } from './auth';
 
 const middleware = [
@@ -35,7 +35,7 @@ const authPersistConfig = {
 export const store = configureStore({
   reducer: {
     auth: persistReducer(authPersistConfig, authReducer),
-    // todos: todosReducer,
+    phonebook: phonebookReducer,
   },
   middleware,
   devTools: process.env.NODE_ENV === 'development',
