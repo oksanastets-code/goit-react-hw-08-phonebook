@@ -20,10 +20,10 @@ export default function ContactList() {
   return (
     <ListWrapper>
       <List>
-        {contacts.map(({ id, nick, number }) => (
+        {contacts.map(({ id, name, number }) => (
           <ContactItem key={id}>
             <ContactData>
-              {nick}: {number}
+              {name}: {number}
             </ContactData>
             <DeleteButton onClick={() => onDeleteContact(id)}>
               Delete

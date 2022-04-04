@@ -15,7 +15,7 @@ import {
   REGISTER,
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
-import { default as phonebookReducer } from './PhoneBook/phone-book-reducer';
+import phonebookReducer from './PhoneBook/phone-book-reducer';
 import { authReducer } from './auth';
 
 const middleware = [

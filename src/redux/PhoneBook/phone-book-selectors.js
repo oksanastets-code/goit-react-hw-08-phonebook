@@ -5,6 +5,6 @@ export const getFoundedContacts = state => {
   const filter = getFilter(state);
   const normalizedFilter = filter.toLowerCase();
   return contacts.filter(contact =>
-    contact.nick.toLowerCase().includes(normalizedFilter)
+    contact.name.toLowerCase().includes(normalizedFilter)
   );
 };

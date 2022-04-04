@@ -5,15 +5,15 @@ import PropTypes from 'prop-types';
 import { Form, Label, InputField, AddButton } from './NameEditor.styled';
 
 export default function NameEditor() {
-  const [nick, setNick] = useState('');
+  const [name, setName] = useState('');
   const [number, setNumber] = useState('');
   const dispatch = useDispatch();
 
   const handleForm = e => {
     const { name, value } = e.target;
     switch (name) {
-      case 'nick':
-        setNick(value);
+      case 'name':
+        setName(value);
         break;
       case 'number':
         setNumber(value);
@@ -25,8 +25,8 @@ export default function NameEditor() {
 
   const handleSubmit = e => {
     e.preventDefault();
-    dispatch(addContact({ nick, number }));
-    setNick('');
+    dispatch(addContact({ name, number }));
+    setName('');
     setNumber('');
   };
 
@@ -37,8 +37,8 @@ export default function NameEditor() {
           Name
           <InputField
             type="text"
-            name="nick"
-            value={nick}
+            name="name"
+            value={name}
             onChange={handleForm}
             pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
             title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
