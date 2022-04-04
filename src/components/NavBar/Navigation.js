@@ -24,7 +24,7 @@ export default function Navigation() {
           </NavListItem>
           <NavListItem>
             <NavLink
-              to="/user"
+              to="/contacts"
               style={({ isActive }) => ({
                 color: isActive ? '#dc6300' : '#2a363b',
                 textDecoration: isActive ? 'underline' : 'none',

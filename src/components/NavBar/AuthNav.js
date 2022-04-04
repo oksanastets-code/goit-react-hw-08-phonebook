@@ -19,7 +19,7 @@ export default function AuthNav() {
     <NavList>
         <NavListItem>
           <NavLink
-            to="/signup"
+            to="/register"
             style={({ isActive }) => ({
               color: isActive ? '#dc6300' : '#2a363b',
               textDecoration: isActive ? 'underline' : 'none',

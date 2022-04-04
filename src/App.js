@@ -13,8 +13,8 @@ export const App = () => {
 
       <Routes>
         <Route path="/" element={<HomeView />}></Route>
-        <Route path="/user" element={<UserView />}></Route>
-        <Route path="/signup" element={<SignUpView />}></Route>
+        <Route path="/contacts" element={<UserView />}></Route>
+        <Route path="/register" element={<SignUpView />}></Route>
         <Route path="/login" element={<LogInView />}></Route>
       </Routes>
     </Container>
