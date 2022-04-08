@@ -1,9 +1,4 @@
-import {
-  configureStore,
-  getDefaultMiddleware,
-
-} from '@reduxjs/toolkit';
-// import logger from 'redux-logger';
+import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
 import {
   persistStore,
   persistReducer,

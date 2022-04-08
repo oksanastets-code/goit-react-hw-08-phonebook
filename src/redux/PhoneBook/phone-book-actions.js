@@ -1,4 +1,3 @@
-// import { nanoid } from 'nanoid';
 import { createAction } from '@reduxjs/toolkit';
 
 export const fetchContactsRequest = createAction('phonebook/fetchContactsRequest');

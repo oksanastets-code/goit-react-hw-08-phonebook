@@ -8,17 +8,13 @@ import {
   deleteContactRequest,
   deleteContactSuccess,
   deleteContactError,
-  // deleteContact,
   changeFilter,
   fetchContactsRequest,
   fetchContactsSuccess,
   fetchContactsError,
 } from './phone-book-actions';
 
-// import initialContacts from '../../Phonebook/contacts.json';
-
 const contacts = createReducer([],
-  // initialContacts,
   {
     [fetchContactsSuccess]: (_, { payload }) => payload,
     [addContactSuccess]: (state, { payload }) => { 
