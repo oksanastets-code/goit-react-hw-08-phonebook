@@ -2,7 +2,8 @@ import React from 'react';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { authOperations } from '../redux/auth';
-import { Form, Label, InputField } from 'components/Phonebook/Form.styled'
+import { Form, Label, InputField } from 'components/Phonebook/Form.styled';
+import { Button } from 'components/Button/Button.styled';
 
 const SignUpView = () => {
    const dispatch = useDispatch();
@@ -67,7 +68,7 @@ const SignUpView = () => {
           />
         </Label>
 
-        <button type="submit">Sign Up</button>
+        <Button type="submit">Sign Up</Button>
       </Form>
     </>
   );

@@ -2,7 +2,9 @@ import React from 'react';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { authOperations } from '../redux/auth';
-import { Form, Label, InputField } from 'components/Phonebook/Form.styled'
+import { Form, Label, InputField } from 'components/Phonebook/Form.styled';
+import { Button } from 'components/Button/Button.styled';
+
 
 const LogInView = () => {
   const dispatch = useDispatch();
@@ -50,7 +52,7 @@ const LogInView = () => {
           />
         </Label>
 
-        <button type="submit">Log In</button>
+        <Button type="submit">Log In</Button>
       </Form>
     </>
   );

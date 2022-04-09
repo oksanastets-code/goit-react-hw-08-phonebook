@@ -1,10 +1,31 @@
 import React from 'react';
+import { NavLink } from './Link.styled';
 
+const styles = {
+  p: {
+    textAlign: 'center',
+    fontSize: '30px',
+    fontWeight: '700',
+    marginBottom: '20px',
+  },
+};
 const HomeView = () => {
   return (
     <>
-      <h1>Wellcome back to our PHONEBOOK App!</h1>
-      <h2>Or create your own collection</h2>
+      <p style={styles.p}>
+        Wellcome{' '}
+        <span>
+          <NavLink to="/login">back</NavLink>
+        </span>{' '}
+        to our PHONEBOOK App!
+      </p>
+      <p style={styles.p}>
+        Or{' '}
+        <span>
+          <NavLink to="/register">create</NavLink>
+        </span>{' '}
+        your own collection
+      </p>
     </>
   );
 };

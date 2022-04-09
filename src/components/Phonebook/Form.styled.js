@@ -5,8 +5,7 @@ export const Form = styled.form`
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
-  width: 50%;
-   /* width: 400px; */
+  width: 60%;
 `;
 export const Label = styled.label`
   font-weight: 500;
@@ -16,7 +15,7 @@ export const Label = styled.label`
 `;
 export const InputField = styled.input`
   margin-top: 10px;
-  padding: 4px;
+  padding: 15px;
   border: 1px solid #bdbdbd;
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;

@@ -6,8 +6,10 @@ import {
   ContactItem,
   List,
   ContactData,
-  DeleteButton,
+  // DeleteButton,
 } from './ContactList.styled';
+import { Button } from '../Button/Button.styled';
+
 import { useEffect } from 'react';
 
 export default function ContactList() {
@@ -24,9 +26,9 @@ export default function ContactList() {
             <ContactData>
               {name}: {number}
             </ContactData>
-            <DeleteButton onClick={() => onDeleteContact(id)}>
+            <Button onClick={() => onDeleteContact(id)}>
               Delete
-            </DeleteButton>
+            </Button>
           </ContactItem>
         ))}
       </List>

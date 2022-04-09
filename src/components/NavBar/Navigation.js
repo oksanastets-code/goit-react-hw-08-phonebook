@@ -14,8 +14,10 @@ export default function Navigation() {
           <NavLink
             to="/"
             style={({ isActive }) => ({
-              color: '#ffffff',
-              borderBottom: isActive ? '1px solid #fff' : 'none',
+              color: isActive ? '#4caf50' : '#ffffff',
+              borderBottom: isActive ? '1px solid #4caf50' : 'none',
+                            fontWeight: isActive ? '700' : '500',
+
             })}
           >
             Home
@@ -25,8 +27,10 @@ export default function Navigation() {
           <NavLink
             to="/contacts"
             style={({ isActive }) => ({
-              color: '#ffffff',
-              borderBottom: isActive ? '1px solid #fff' : 'none',
+              color: isActive ? '#4caf50' : '#ffffff',
+              borderBottom: isActive ? '1px solid #4caf50' : 'none',
+                            fontWeight: isActive ? '700' : '500',
+
             })}
           >
            Phonebook

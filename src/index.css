@@ -25,6 +25,10 @@ body {
   radial-gradient(at top right, hsl(41, 43%, 27%), transparent),
   radial-gradient(at bottom right, hsl(131, 43%, 27%), transparent),
   radial-gradient(at bottom left, hsl(221, 43%, 27%), transparent);
+  /* radial-gradient(at top left, hsl(72, 79%, 33%), transparent),
+  radial-gradient(at top right, hsl(162, 79%, 33%), transparent),
+  radial-gradient(at bottom right, hsl(252, 79%, 33%), transparent),
+  radial-gradient(at bottom left, hsl(342, 79%, 33%), transparent); */
   color: #ffffff;
   background-repeat: no-repeat;
   background-size: cover;

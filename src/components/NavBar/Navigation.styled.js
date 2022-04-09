@@ -11,7 +11,6 @@ export const NavList = styled.ul`
 export const NavListItem = styled.li`
   display: inline-block;
   padding-right: 24px;
-  /* padding-bottom: 12px; */
   font-weight: 500;
   font-size: 28px;
 `;
