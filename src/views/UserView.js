@@ -17,7 +17,9 @@ const UserView = (params) => {
          {/* <h1>Phonebook</h1> */}
 
           <NameEditor />
-          <h2>Contacts</h2>
+         <h2 style={{
+           textAlign: 'center',
+         }}>Contacts</h2>
           <Filter />
           <ContactList />
         </Container>

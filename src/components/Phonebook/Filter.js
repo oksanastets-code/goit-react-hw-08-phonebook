@@ -2,14 +2,14 @@ import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
 import { changeFilter } from '../../redux/PhoneBook/phone-book-actions';
 import { getFilter } from '../../redux/PhoneBook/phone-book-selectors';
-import { Label, InputField } from './NameEditor.styled';
+import {  Form, Label, InputField } from './Form.styled';
 
 export default function Filter () {
   const value = useSelector(getFilter);
   const dispatch = useDispatch();
-  return  (
+  return (
+    <Form>
     <Label htmlFor="">
-      Find contacts by name
       <InputField
         type="text"
         name="filter"
@@ -20,7 +20,8 @@ export default function Filter () {
         required
         placeholder="Enter key word"
       />
-    </Label>
+      </Label>
+      </Form>
   )
 };
 Filter.propTypes = {

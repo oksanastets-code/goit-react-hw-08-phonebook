@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { fetchContacts, deleteContact } from '../../redux/PhoneBook/phone-book-operations';
 import { getFoundedContacts } from '../../redux/PhoneBook/phone-book-selectors';
 import {
-  ListWrapper,
   ContactItem,
   List,
   ContactData,
@@ -18,7 +17,7 @@ export default function ContactList() {
   const onDeleteContact = id => dispatch(deleteContact(id));
   useEffect(() => {dispatch(fetchContacts()) }, [dispatch])
   return (
-    <ListWrapper>
+    // <ListWrapper>
       <List>
         {contacts.map(({ id, name, number }) => (
           <ContactItem key={id}>
@@ -31,7 +30,7 @@ export default function ContactList() {
           </ContactItem>
         ))}
       </List>
-    </ListWrapper>
+    // </ListWrapper>
   )
 };
 ContactList.propTypes = {

@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { authOperations } from '../redux/auth';
-import { Form, Label, InputField } from 'components/Phonebook/NameEditor.styled'
+import { Form, Label, InputField } from 'components/Phonebook/Form.styled'
 
 const SignUpView = () => {
    const dispatch = useDispatch();

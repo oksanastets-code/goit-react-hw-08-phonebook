@@ -2,8 +2,8 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addContact } from '../../redux/PhoneBook/phone-book-operations';
 import PropTypes from 'prop-types';
-import { Form, Label, InputField, AddButton } from './NameEditor.styled';
-
+import { Form, Label, InputField } from './Form.styled';
+import { AddButton } from './NameEditor.styled';
 export default function NameEditor() {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
@@ -31,7 +31,6 @@ export default function NameEditor() {
   };
 
   return (
-    <>
       <Form onSubmit={handleSubmit}>
         <Label htmlFor="">
           Name
@@ -61,7 +60,7 @@ export default function NameEditor() {
         </Label>
         <AddButton type="submit">Add contact</AddButton>
       </Form>
-    </>
+
   );
 }
 

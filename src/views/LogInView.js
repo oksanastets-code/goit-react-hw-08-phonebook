@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { authOperations } from '../redux/auth';
-import { Form, Label, InputField } from 'components/Phonebook/NameEditor.styled'
+import { Form, Label, InputField } from 'components/Phonebook/Form.styled'
 
 const LogInView = () => {
   const dispatch = useDispatch();
@@ -29,7 +29,6 @@ const LogInView = () => {
 
   return (
     <>
-      {/* <h1>Ввійти в свій обліковий запис</h1> */}
       <Form onSubmit={handleSubmit} autoComplete="off">
         <Label>
           Email
