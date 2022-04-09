@@ -34,7 +34,6 @@ const SignUpView = () => {
 
   return (
     <>
-      {/* <h1>Зареєструватися</h1> */}
       <Form
         onSubmit={handleSubmit}
         autoComplete="off"

@@ -6,7 +6,8 @@ const styles = {
     textAlign: 'center',
     fontSize: '30px',
     fontWeight: '700',
-    marginBottom: '20px',
+        marginBottom: '20px',
+     
   },
 };
 const HomeView = () => {
