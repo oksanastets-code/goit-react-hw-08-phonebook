@@ -5,11 +5,11 @@ export const Form = styled.form`
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
-  outline: 1px solid black;
+  /* outline: 1px solid black; */
   width: 400px;
 `;
 export const Label = styled.label`
-  color: #212121;
+  /* color: #212121; */
   font-weight: 500;
   display: flex;
   flex-direction: column;

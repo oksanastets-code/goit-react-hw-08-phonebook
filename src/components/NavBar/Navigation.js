@@ -14,7 +14,6 @@ export default function Navigation() {
           <NavLink
             to="/"
             style={({ isActive }) => ({
-              // color: isActive ? '#193e20' : '#ffffff',
               color: '#ffffff',
               borderBottom: isActive ? '1px solid #fff' : 'none',
             })}
@@ -26,12 +25,11 @@ export default function Navigation() {
           <NavLink
             to="/contacts"
             style={({ isActive }) => ({
-              // color: isActive ? '#193e20' : '#ffffff',
               color: '#ffffff',
               borderBottom: isActive ? '1px solid #fff' : 'none',
             })}
           >
-            Your contacts
+           Phonebook
           </NavLink>
         </NavListItem>
       </NavList>

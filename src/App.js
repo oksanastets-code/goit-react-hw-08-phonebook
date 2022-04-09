@@ -1,14 +1,14 @@
-import { useEffect } from 'react';
+import { lazy, Suspense, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Container from './components/Container/Container';
 import NavBar from 'components/NavBar/NavBar';
-import HomeView from 'views/HomeView';
-import UserView from 'views/UserView';
-import SignUpView from 'views/SignUpView';
-import LogInView from 'views/LogInView';
-// import PublicRoute from './components/PublicRoute';
 import { authOperations, authSelectors } from 'redux/auth';
+
+const HomeView = lazy(() => import('views/HomeView'));
+const UserView = lazy(() => import('views/UserView'));
+const SignUpView = lazy(() => import('views/SignUpView'));
+const LogInView = lazy(() => import('views/LogInView'));
 
 export const App = () => {
   const dispatch = useDispatch();
@@ -25,12 +25,13 @@ export const App = () => {
         <NavBar />
       </Container>
       <Container>
+        <Suspense fallback={<h2>Loading...</h2>}>
         <Routes>
+          {/* PublicRoute HomeView*/}
            <Route
             path="/"
             element={isLoggedIn ? <Navigate to="/contacts" /> : <HomeView />}
           />
-          {/* <Route path="/" element={<HomeView />} /> */}
           {/* PrivateRoute UserView*/}
           <Route
             path="/contacts"
@@ -46,7 +47,8 @@ export const App = () => {
             path="/login"
             element={isLoggedIn ? <Navigate to="/contacts" /> : <LogInView />}
           />
-        </Routes>
+          </Routes>
+          </Suspense>
       </Container>
     </>
   );

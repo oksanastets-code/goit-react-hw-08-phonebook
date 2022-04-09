@@ -14,7 +14,8 @@ const UserView = (params) => {
         
         <Container>
           <Toaster />
-          <h1>Phonebook</h1>
+         {/* <h1>Phonebook</h1> */}
+
           <NameEditor />
           <h2>Contacts</h2>
           <Filter />

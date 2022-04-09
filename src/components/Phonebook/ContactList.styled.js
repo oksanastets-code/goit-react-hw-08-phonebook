@@ -4,7 +4,7 @@ export const ListWrapper = styled.div`
   margin-right: auto;
 `;
 export const ContactItem = styled.li`
-  color: #212121;
+  /* color: #212121; */
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
