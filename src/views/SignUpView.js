@@ -2,17 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { authOperations } from '../redux/auth';
-
-const styles = {
-  form: {
-    width: 320,
-  },
-  label: {
-    display: 'flex',
-    flexDirection: 'column',
-    marginBottom: 15,
-  },
-};
+import { Form, Label, InputField } from 'components/Phonebook/NameEditor.styled'
 
 const SignUpView = () => {
    const dispatch = useDispatch();
@@ -43,49 +33,42 @@ const SignUpView = () => {
 
   return (
     <>
-      <h1>Зареєструватися</h1>
-      <form
+      {/* <h1>Зареєструватися</h1> */}
+      <Form
         onSubmit={handleSubmit}
-        style={styles.form}
         autoComplete="off"
       >
-        <label
-        style={styles.label}
-        >
+        <Label>
           Name
-          <input
+          <InputField
             type="text"
             name="name"
             value={name} onChange={handleChange}
           />
-        </label>
+        </Label>
 
-        <label
-        style={styles.label}
-        >
+        <Label>
           Email
-          <input
+          <InputField
             type="email"
             name="email"
             value={email}
             onChange={handleChange}
           />
-        </label>
+        </Label>
 
-        <label
-        style={styles.label}
-        >
+        <Label>
           Password
-          <input
+          <InputField
             type="password"
             name="password"
             value={password}
             onChange={handleChange}
           />
-        </label>
+        </Label>
 
         <button type="submit">Sign Up</button>
-      </form>
+      </Form>
     </>
   );
 };

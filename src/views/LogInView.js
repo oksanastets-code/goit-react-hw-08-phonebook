@@ -2,17 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { authOperations } from '../redux/auth';
-
-const styles = {
-  form: {
-    width: 320,
-  },
-  label: {
-    display: 'flex',
-    flexDirection: 'column',
-    marginBottom: 15,
-  },
-};
+import { Form, Label, InputField } from 'components/Phonebook/NameEditor.styled'
 
 const LogInView = () => {
   const dispatch = useDispatch();
@@ -39,30 +29,30 @@ const LogInView = () => {
 
   return (
     <>
-      <h1>Ввійти в свій обліковий запис</h1>
-      <form onSubmit={handleSubmit} style={styles.form} autoComplete="off">
-        <label style={styles.label}>
+      {/* <h1>Ввійти в свій обліковий запис</h1> */}
+      <Form onSubmit={handleSubmit} autoComplete="off">
+        <Label>
           Email
-          <input
+          <InputField
             type="email"
             name="email"
             value={email}
             onChange={handleChange}
           />
-        </label>
+        </Label>
 
-        <label style={styles.label}>
+        <Label>
           Password
-          <input
+          <InputField
             type="password"
             name="password"
             value={password}
             onChange={handleChange}
           />
-        </label>
+        </Label>
 
         <button type="submit">Log In</button>
-      </form>
+      </Form>
     </>
   );
 };
