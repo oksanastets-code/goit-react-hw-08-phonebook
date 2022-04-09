@@ -9,7 +9,7 @@ export default function AuthNav() {
           to="/register"
           style={({ isActive }) => ({
             color: isActive ? '#4caf50' : '#ffffff',
-           borderBottom: isActive ? '1px solid #4caf50' : 'none',
+            borderBottom: isActive ? '1px solid #4caf50' : 'none',
             fontWeight: isActive ? '700' : '500',
           })}
         >

@@ -5,7 +5,6 @@ import AuthNav from './AuthNav';
 import UserMenu from 'components/UserMenu/UserMenu';
 import { authSelectors } from 'redux/auth';
 
-
 export default function Navigation() {
   const isLoggedIn = useSelector(authSelectors.getIsLoggedIn);
   return (
@@ -17,8 +16,7 @@ export default function Navigation() {
             style={({ isActive }) => ({
               color: isActive ? '#4caf50' : '#ffffff',
               borderBottom: isActive ? '1px solid #4caf50' : 'none',
-                            fontWeight: isActive ? '700' : '500',
-
+              fontWeight: isActive ? '700' : '500',
             })}
           >
             Home
@@ -30,11 +28,10 @@ export default function Navigation() {
             style={({ isActive }) => ({
               color: isActive ? '#4caf50' : '#ffffff',
               borderBottom: isActive ? '1px solid #4caf50' : 'none',
-                            fontWeight: isActive ? '700' : '500',
-
+              fontWeight: isActive ? '700' : '500',
             })}
           >
-           Phonebook
+            Phonebook
           </NavLink>
         </NavListItem>
       </NavList>
