@@ -10,7 +10,7 @@ import LogInView from 'views/LogInView';
 // import PublicRoute from './components/PublicRoute';
 import { authOperations, authSelectors } from 'redux/auth';
 
-export const App = ({ restricted = false }) => {
+export const App = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -18,36 +18,36 @@ export const App = ({ restricted = false }) => {
   }, [dispatch]);
 
   const isLoggedIn = useSelector(authSelectors.getIsLoggedIn);
-  const shouldRedirect = isLoggedIn && restricted;
-  return (
-    <Container>
-      <NavBar />
 
-      <Routes>
-        <Route path="/" element={<HomeView />}></Route>
-        {/* PrivateRoute */}
-        <Route
-          path="/contacts"
-          element={isLoggedIn ? <UserView /> : <Navigate to="/login" />}
-        />
-        {/* PublicRoutes */}
-        <Route
-          path="/register"
-          restricted
-          element={
-            shouldRedirect ? <Navigate to="/contacts" /> : <SignUpView />
-          }
-        />
-        {/* <Route
-          path="/login"
-          restricted
-          element={shouldRedirect ? <Navigate to="/contacts" /> : <LogInView />}
-        /> */}
-        <Route
-          path="/login"
-          element={isLoggedIn ? <Navigate to="/contacts" /> : <LogInView />}
-        />
-      </Routes>
-    </Container>
+  return (
+    <>
+      <Container>
+        <NavBar />
+      </Container>
+      <Container>
+        <Routes>
+           <Route
+            path="/"
+            element={isLoggedIn ? <Navigate to="/contacts" /> : <HomeView />}
+          />
+          {/* <Route path="/" element={<HomeView />} /> */}
+          {/* PrivateRoute UserView*/}
+          <Route
+            path="/contacts"
+            element={isLoggedIn ? <UserView /> : <Navigate to="/login" />}
+          />
+          {/* PublicRoute SignUpView*/}
+          <Route
+            path="/register"
+            element={isLoggedIn ? <Navigate to="/" /> : <SignUpView />}
+          />
+          {/* PublicRoute LogInView*/}
+          <Route
+            path="/login"
+            element={isLoggedIn ? <Navigate to="/contacts" /> : <LogInView />}
+          />
+        </Routes>
+      </Container>
+    </>
   );
 };

@@ -8,7 +8,7 @@ export default function AuthNav() {
           <NavLink
             to="/register"
             style={({ isActive }) => ({
-              color: isActive ? '#dc6300' : '#2a363b',
+              color: '#ffffff',
               textDecoration: isActive ? 'underline' : 'none',
             })}
           >
@@ -19,8 +19,8 @@ export default function AuthNav() {
           <NavLink
             to="/login"
             style={({ isActive }) => ({
-              color: isActive ? '#dc6300' : '#2a363b',
-              textDecoration: isActive ? 'underline' : 'none',
+              color: '#ffffff',
+              borderBottom: isActive ? '1px solid #fff' : 'none',
             })}
           >
             Log In

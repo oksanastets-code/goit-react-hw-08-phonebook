@@ -11,11 +11,12 @@ export const NavList = styled.ul`
 export const NavListItem = styled.li`
   display: inline-block;
   padding-right: 24px;
-  font-weight: 700;
+  /* padding-bottom: 12px; */
+  font-weight: 500;
   font-size: 28px;
 `;
 export const Wellcome = styled.span`
 padding-right: 24px;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 28px;
 `

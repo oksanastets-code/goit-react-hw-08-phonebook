@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 export const ContainerBox = styled.div`
   max-width: 1170px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 50px;
-  padding-right: 50px;
+  margin: 25px auto;
+  padding: 25px;
+  border-radius: 10px;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.2), rgba(47, 48, 58, 0.2));
 `;

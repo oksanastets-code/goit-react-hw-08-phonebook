@@ -1,12 +1,33 @@
-@import-normalize; /* bring in normalize.css styles */
-
+@import 'modern-normalize/modern-normalize.css';
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,600;1,300;1,600&display=swap");
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+html {
+ min-height: 100%;
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Nunito",
+  sans-serif;
+    
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+  background: 
+  /* radial-gradient(at top left, var(--hsl-0), transparent),
+  radial-gradient(at top right, var(--hsl-1), transparent),
+  radial-gradient(at bottom right, var(--hsl-2), transparent),
+  radial-gradient(at bottom left, var(--hsl-3), transparent); */
+  radial-gradient(at top left, hsl(311, 43%, 27%), transparent),
+  radial-gradient(at top right, hsl(41, 43%, 27%), transparent),
+  radial-gradient(at bottom right, hsl(131, 43%, 27%), transparent),
+  radial-gradient(at bottom left, hsl(221, 43%, 27%), transparent);
+  color: #ffffff;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 code {

@@ -14,22 +14,24 @@ export default function Navigation() {
           <NavLink
             to="/"
             style={({ isActive }) => ({
-              color: isActive ? '#dc6300' : '#2a363b',
-              textDecoration: isActive ? 'underline' : 'none',
+              // color: isActive ? '#193e20' : '#ffffff',
+              color: '#ffffff',
+              borderBottom: isActive ? '1px solid #fff' : 'none',
             })}
           >
-            Сторінка вітання
+            Home
           </NavLink>
         </NavListItem>
         <NavListItem>
           <NavLink
             to="/contacts"
             style={({ isActive }) => ({
-              color: isActive ? '#dc6300' : '#2a363b',
-              textDecoration: isActive ? 'underline' : 'none',
+              // color: isActive ? '#193e20' : '#ffffff',
+              color: '#ffffff',
+              borderBottom: isActive ? '1px solid #fff' : 'none',
             })}
           >
-            Сторінка користувача
+            Your contacts
           </NavLink>
         </NavListItem>
       </NavList>
