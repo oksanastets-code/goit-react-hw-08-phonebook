@@ -8,13 +8,10 @@ export default function UserMenu() {
   const name = useSelector(authSelectors.getUsername);
 
   return (
-      <div
-      >
-          <Wellcome
-          >Hello, {name}!
-          </Wellcome>
+    <div>
+      <Wellcome>Hello, {name}!</Wellcome>
       <Button type="button" onClick={() => dispatch(authOperations.logOut())}>
-      Log Out
+        Log Out
       </Button>
     </div>
   );

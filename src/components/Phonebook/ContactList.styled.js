@@ -14,4 +14,3 @@ export const List = styled.ul`
   margin-right: auto;
 `;
 export const ContactData = styled.p``;
-export const DeleteButton = styled.button``;

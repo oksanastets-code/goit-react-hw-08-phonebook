@@ -6,7 +6,6 @@ import {
   ContactItem,
   List,
   ContactData,
-  // DeleteButton,
 } from './ContactList.styled';
 import { Button } from '../Button/Button.styled';
 
