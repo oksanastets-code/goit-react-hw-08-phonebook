@@ -5,7 +5,11 @@ export const Form = styled.form`
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 90%;
+
+   @media screen and (min-width: 768px) {
+     width: 60%;
+   }
 `;
 export const Label = styled.label`
   font-weight: 500;
